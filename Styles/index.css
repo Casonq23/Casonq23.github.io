@@ -1,0 +1,169 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+body {
+  min-height: 100vh;
+}
+
+a, button {
+  cursor: reset;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-image: url("Styles/MainBackground.png");
+}
+
+header {
+  background-color: rgb(83, 83, 83);
+  position: relative;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+header a:hover {
+  color: #000000;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px;
+}
+
+nav li {
+  display: inline;
+  margin-left: 70px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+.banner {
+  top: 75;
+  left: 0;
+  height: 9%;
+  width: 30%;
+  background-color: rgb(83, 83, 83);
+}
+
+.banner-text {
+  text-align: left;
+  padding: 25px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: -80px;
+}
+
+.banner-text h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+.featured {
+  margin-top: 0px;
+}
+
+.featured img {
+  display: block;
+  margin-left: 650px;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.content hr {
+  border: none;
+  border-top: 10px solid rgb(83, 83, 83);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 50px;
+  margin-top: 80px;
+}
+
+.projects-item {
+  width: 900px;
+  height: auto;
+}
+
+.projects-item img {
+  width: 100%;
+  display: block;
+}
+
+.left-images, .right-images {
+  margin-left: 250px;
+  margin-bottom: 100px;
+}
+
+.left-images {
+  display: inline-block;
+  width: 100%;
+}
+
+.right-images {
+  display: inline-block;
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */
