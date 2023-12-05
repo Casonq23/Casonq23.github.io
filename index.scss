@@ -1,0 +1,420 @@
+@import './variables';
+@import './mixins';
+@import './reset';
+
+@font-face {
+font-family: Exo;
+src: url('/Styles/Fonts/kenyan coffee rg it.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Exo;
+    background-image: url('/Styles/Images/Grays.png'); 
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+}
+
+header {
+    background-image: url('/Styles/Images/Banner.png');
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.logo {
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+.logo-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    margin-left: 200px;
+    margin-top: 25px;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+    font-family: Exo;
+    letter-spacing: 5px;
+    padding: -10px;
+}
+
+.main-content {
+    padding: 0px;
+}
+
+.main-img {
+    margin-top: -80px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    float: right;
+    width: 48%;
+    padding-right: 100px;
+}
+
+.banner {
+    position: relative;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.banner img {
+    width: 500px;
+    height: 75px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 12px;
+    left: 100px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.fav-games img {
+    width: 500px;
+    height: 75px;
+    margin-top: 550px;
+    margin-bottom: -500px;
+}
+
+.fav-games-text {
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 740px
+}
+
+.image-rotator {
+    margin-top: -80px;
+    margin-right: 100px;
+    float: right;
+    width: 48%;
+    padding-right: 100px;
+}
+
+.image-rotator img {
+    width: 100%;
+    height: auto;
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: space-between;
+    max-width: 5000px;
+    margin: 0 auto;
+    margin-top: 740px;
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    margin-top: -300px;
+}
+
+.left-column img,
+.right-column img {
+    width: 2000px;
+    // max-width: 100%;
+    margin-bottom: 30px;
+    transition: transform 0.7s ease;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.right-column img {
+    margin-bottom: 150px;
+}
+
+.left-column img {
+    margin-bottom: 75px;
+}
+
+.left-column img:hover,
+.right-column img:hover {
+    transform: scale(1.1); /* Add a slight zoom effect on hover */
+}
+
+/* Apply hover styles when the image is focused (e.g., via Tab key) */
+.left-column img:focus,
+.right-column img:focus {
+    transform: scale(1.1); /* Add a zoom effect or any other styles you want */
+}
+
+/* Apply hover styles */
+
+body.projects .left-column img:hover:nth-child(1) {
+    content: url('/Styles/Images/AracdeHover.png');
+}
+
+body.projects .left-column img:hover:nth-child(2) {
+    content: url('/Styles/Images/WickedHover.png');
+}
+
+body.projects .left-column img:hover:nth-child(3) {
+    content: url('/Styles/Images/DrillHover.png');
+}
+
+body.projects .right-column img:hover:nth-child(1) {
+    content: url('/Styles/Images/Tiny Hover.png');
+}
+
+body.projects .right-column img:hover:nth-child(2) {
+    content: url('/Styles/Images/CozyHover.png');
+}
+
+/* Remove outline when the image is clicked with the mouse */
+.left-column img:active,
+.right-column img:active,
+.left-column img:focus-visible,
+.right-column img:focus-visible {
+    outline: none;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/Styles/Images/Banner.png');
+    padding: 10px 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+.left-text {
+    cursor: pointer;
+}
+
+.left-text a {
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.right-buttons {
+    display: flex;
+    gap: 30px;
+    width: 100px;
+}
+
+.right-buttons a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.right-buttons img {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%; 
+    transition: transform 0.3s ease; 
+}
+
+.right-buttons img:hover {
+    transform: scale(1.2); 
+}
+
+// iphone
+
+@media only screen and (max-width: 430px) {
+    .logo {
+        font-size: 35px;
+    }
+
+    body {
+        margin: 0;
+        padding: -500px;
+        font-family: Exo;
+        background-image: url('/Styles/Images/Grays.png'); 
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255);
+    }
+
+    header {
+        background-image: url('/Styles/Images/Banner.png');
+        padding: 25px;
+        width: 435px;
+    }
+
+    .main-img {
+        margin-top: 50px;
+        margin-right: -45px;
+        float: center;
+        width: 100%;
+    }
+
+    .banner {
+        position: relative;
+        text-align: left;
+        margin-top: 30px;
+        z-index: 0;
+    }
+    
+    .banner img {
+        width: 250px;
+        height: 60px;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 12px;
+        left: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 10px;
+    }
+
+    .image-rotator {
+        margin-top: 50px;
+        margin-right: -45px;
+        float: center;
+        width: 100%;
+    }
+    
+    .image-rotator img {
+        width: 100%;
+        height: auto;
+    }
+
+    .photo-grid {
+        display: flex;
+        justify-content: space-between;
+        max-width: 5000px;
+        margin: 0 auto;
+        margin-top: 700px;
+        margin-left: -10px;
+    }
+    
+    .left-column,
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-top: -325px;
+    }
+    
+    .left-column img,
+    .right-column img {
+        width: 200px;
+        // max-width: 100%;
+        margin-bottom: 30px;
+        transition: transform 0.7s ease;
+        cursor: pointer;
+        outline: none; /* Remove default focus outline */
+    }
+
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -200px;
+    }
+    
+    .fav-games img {
+        width: 250px;
+        height: 60px;
+        margin-top: 100px;
+        margin-bottom: -350px;
+    }
+    
+    .fav-games-text {
+        position: absolute;
+        top: 12px;
+        left: 6px;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 8px;
+        margin-top: 615px
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('/Styles/Images/Banner.png');
+        padding: 10px 20px;
+        bottom: 0;
+        width: 100%;
+        margin-top: 200px;
+    }
+    
+    .left-text a {
+        color: white;
+        font-size: 25px;
+        margin-left: 5px;
+        text-decoration: none;
+    }
+    
+    .right-buttons {
+        display: flex;
+        gap: 10px;
+        width: 100px;
+    }
+
+    // Hamburger
+
+    .burger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 50;
+    }
+    
+    .line1, .line2, .line3 {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        margin: 5px 0;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: -45px;
+        width: 100%;
+        background-image: url('/Styles/Images/Banner.png');
+        text-align: center;
+        margin-top: 50px;
+        z-index: 1;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+}
